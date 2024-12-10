@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Mellow - Hotel HTML Website Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="Mellow Team">
+  <meta name="keywords" content="Hotel, Resort, Booking, Travel">
+  <meta name="description" content="Mellow is a modern and responsive hotel HTML website template.">
+
+  <!-- Head Partial -->
+  <partial name="_Head" />
+</head>
+
+<body>
+
+<!-- SVG Definitions -->
+<partial name="_svgs" />
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="loader"></div>
+</div>
+
+<!-- Header -->
+<partial name="_Header" />
+
+<!-- Main Content -->
+@RenderBody()
+
+<!-- Slider Section -->
+<partial name="_Slider" />
+
+<!-- About Us Section -->
+<partial name="_about-us" />
+
+<!-- Info Section -->
+<partial name="_info" />
+
+<!-- Room Section -->
+<partial name="_room" />
+
+<!-- Gallery Section -->
+<partial name="_gallery" />
+
+<!-- Services Section -->
+<partial name="_services" />
+
+<!-- Blog Section -->
+<partial name="_blog" />
+
+<!-- Footer -->
+<partial name="_Footer" />
+
+<!-- Scripts -->
+<script src="~/Mellow/js/jquery-1.11.0.min.js"></script>
+<script src="~/Mellow/js/bootstrap.bundle.min.js"></script>
+<script src="~/Mellow/js/plugins.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="~/Mellow/js/script.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+<!-- Notyf Component -->
+@await Component.InvokeAsync("Notyf")
+
+</body>
+
+</html>

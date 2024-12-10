@@ -1,0 +1,25 @@
+﻿@page
+@model Mellow.RazorPage.Pages.Admin.Roles.UpdateModel
+@{
+}
+
+<div class="card">
+    <h5 class="card-header">
+        <a asp-page="Insert" class="btn btn-primary">Add New Role</a>
+    </h5>
+    <div class="card-body">
+        <form asp-page="Update" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            
+            <input type="hidden" asp-for="Role.Id" />
+            
+            <div class="form-group">
+                <label asp-for="Role.Name" class="control-label">Role Name</label>
+                <input class="form-control" asp-for="Role.Name" />
+                <span asp-validation-for="Role.Name" class="text-danger"></span>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</div>

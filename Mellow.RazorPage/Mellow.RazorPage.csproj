@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="AspNetCoreHero.ToastNotification" Version="1.1.0" />
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="9.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mellow.BL\Mellow.BL.csproj" />
+    <ProjectReference Include="..\Mellow.DAL\Mellow.DAL.csproj" />
+    <ProjectReference Include="..\Mellow.Razor.Admin\Mellow.Razor.Admin.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Admin\Roles\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Roles\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Roles\Insert.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Roles\Update.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Shared\_AdminLayout.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Shared\_Footer.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Shared\_Link.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Shared\_Menu.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Shared\_Navbar.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Shared\_Scripts.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Users\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Users\Insert.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Admin\Users\Update.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="Pages\Admin\Roles\Delete.cshtml" />
+    <AdditionalFiles Include="Pages\Admin\Roles\Index.cshtml" />
+    <AdditionalFiles Include="Pages\Admin\Roles\Insert.cshtml" />
+    <AdditionalFiles Include="Pages\Admin\Roles\Update.cshtml" />
+    <AdditionalFiles Include="Pages\Admin\Shared\_AdminLayout.cshtml" />
+    <AdditionalFiles Include="Pages\Admin\Shared\_Footer.cshtml" />
+    <AdditionalFiles Include="Pages\Admin\Shared\_Link.cshtml" />
+    <AdditionalFiles Include="Pages\Admin\Shared\_Menu.cshtml" />
+    <AdditionalFiles Include="Pages\Admin\Shared\_Navbar.cshtml" />
+    <AdditionalFiles Include="Pages\Admin\Shared\_Scripts.cshtml" />
+    <AdditionalFiles Include="Pages\Admin\Users\Index.cshtml" />
+    <AdditionalFiles Include="Pages\Admin\Users\Insert.cshtml" />
+    <AdditionalFiles Include="Pages\Admin\Users\Update.cshtml" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,44 @@
+﻿@page
+@model Mellow.RazorPage.Pages.Admin.Users.UpdateModel
+@{
+}
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Update User</h3>
+    </div>
+    <div class="card-body">
+        <form method="post" asp-page="Update">
+            <!-- Kullanıcı ID -->
+            <input type="hidden" asp-for="UsersVM.User.Id" />
+
+            <!-- Tcno Alanı -->
+            <div class="col-lg-12 my-4">
+                <label class="form-label text-uppercase" asp-for="UsersVM.User.Tcno">Tcno</label>
+                <input class="form-control text-black-50 ps-3" asp-for="UsersVM.User.Tcno" />
+                <span asp-validation-for="UsersVM.User.Tcno" class="text-danger"></span>
+            </div>
+
+            <!-- Roller -->
+            <div class="col-lg-12 my-4">
+                @for (int i = 0; i < Model.UsersVM.UserRolesCheckBoxes.Count; i++)
+                {
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" asp-for="UsersVM.UserRolesCheckBoxes[i].IsChecked"
+                           @(Model.UsersVM.UserRolesCheckBoxes[i].IsChecked ? "checked" : "") />
+                    <label class="form-check-label">@Model.UsersVM.UserRolesCheckBoxes[i].Name</label>
+
+                    <!-- Gizli Alanlar -->
+                    <input type="hidden" asp-for="UsersVM.UserRolesCheckBoxes[i].RoleId" />
+                    <input type="hidden" asp-for="UsersVM.UserRolesCheckBoxes[i].Name" />
+                    <input type="hidden" asp-for="UsersVM.UserRolesCheckBoxes[i].Value" />
+                </div>
+                }
+            </div>
+
+            <!-- Kaydet Butonu -->
+            <div class="col-lg-12 text-end">
+                <button type="submit" class="btn btn-success">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

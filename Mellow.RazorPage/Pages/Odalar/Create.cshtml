@@ -1,0 +1,35 @@
+﻿@page
+@model Mellow.RazorPage.Pages.Odalar.CreateModel
+@{
+}
+
+<div class="card">
+    <div class="card-header">
+        <h1>Create</h1> 
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="@Model.InsertModel.OdaNo"></label>
+                <input asp-for="InsertModel.OdaNo" class="form-control" />
+                <span asp-validation-for="InsertModel.OdaNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InsertModel.OdaTipi"></label>
+                <select asp-for="InsertModel.OdaTipi" asp-items="@Model.InsertModel.OdaTipi2">
+              </select>
+                <span asp-validation-for="InsertModel.OdaTipi" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="InsertModel.YatakSayisi"></label>
+                <input asp-for="InsertModel.YatakSayisi" class="form-control" />
+                <span asp-validation-for="InsertModel.YatakSayisi" class="text-danger"></span>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </form>
+    </div>
+</div>
+
+<partial name="_ValidationScriptsPartial" />

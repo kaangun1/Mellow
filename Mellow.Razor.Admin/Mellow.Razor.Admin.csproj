@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Areas\Admin\Roles\Delete.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Roles\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Roles\Insert.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Roles\Update.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Shared\_AdminLayout.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Shared\_Footer.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Shared\_Link.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Shared\_Menu.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Shared\_Navbar.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Shared\_Scripts.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Users\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Users\Insert.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Users\Update.cshtml" />
+    </ItemGroup>
+
+
+</Project>
